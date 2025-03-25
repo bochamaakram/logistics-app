@@ -8,7 +8,7 @@ const LivraisonsCharts = () => {
   const [chauffeurData, setChauffeurData] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:8000/api/livraisons')
+    fetch('http://192.168.0.189:8000/api/livraisons')
       .then(response => response.json())
       .then(data => {
         // Count occurrences for each category

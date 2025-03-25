@@ -16,7 +16,7 @@ const ProgrammeDeLivraison = () => {
     const fetchData = async () => {
       try {
         const [livraisonsResponse] = await Promise.all([
-          axios.get("http://localhost:8000/api/livraisons"),
+          axios.get("http://192.168.0.189:8000/api/livraisons"),
         ]);
 
         setLivraisons(livraisonsResponse.data);

@@ -23,7 +23,7 @@ const ListeDesLivraison = () => {
     const fetchData = async () => {
       try {
         const [livraisonsResponse] = await Promise.all([
-          axios.get("http://localhost:8000/api/livraisons"),
+          axios.get("http://192.168.0.189:8000/api/livraisons"),
         ]);
 
         setLivraisons(livraisonsResponse.data);
@@ -132,7 +132,7 @@ const ListeDesLivraison = () => {
                   <div className="btn-group" role="group">
                     <a
                       href={`http://127.0.0.1:8000/livraisons/${livraison.id}/modifier`}
-                      className="btn btn-outline-success"
+                      className="btn btn-outline-warning"
                     >
                       Modifier
                     </a>
@@ -162,6 +162,9 @@ const ListeDesLivraison = () => {
           </ul>
         </nav>
       </div>
+            <a href={`http://127.0.0.1:8000/livraison/create`}className="btn btn-outline-success">
+            Ajouter une livraison
+            </a>
     </div>
   );
 };

@@ -8,7 +8,7 @@ const Vidange = () => {
 
   useEffect(() => {
     // Fetch data from the API
-    axios.get('http://localhost:8000/api/camions')
+    axios.get('http://192.168.0.189:8000/api/camions')
       .then(response => {
         setData(response.data);
         setLoading(false);

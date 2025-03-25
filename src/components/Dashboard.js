@@ -38,10 +38,10 @@ const Dashboard = () => {
       try {
         const [produitsResponse, camionsResponse, chauffeursResponse, clientsResponse] =
           await Promise.all([
-            axios.get("http://127.0.0.1:8000/api/produits"),
-            axios.get("http://127.0.0.1:8000/api/camions"),
-            axios.get("http://127.0.0.1:8000/api/chauffeurs"),
-            axios.get("http://127.0.0.1:8000/api/clients"),
+            axios.get("http://192.168.0.189:8000/api/produits"),
+            axios.get("http://192.168.0.189:8000/api/camions"),
+            axios.get("http://192.168.0.189:8000/api/chauffeurs"),
+            axios.get("http://192.168.0.189:8000/api/clients"),
           ]);
 
         setProduits(produitsResponse.data);
@@ -155,13 +155,13 @@ const Dashboard = () => {
                 <td>
                   <div className="btn-group" role="group">
                     <a
-                      href={`http://127.0.0.1:8000/produits/${produit.id}/modifier`}
-                      className="btn btn-outline-success"
+                      href={`http://192.168.0.189:8000/produits/${produit.id}/modifier`}
+                      className="btn btn-outline-warning"
                     >
                       Modifier
                     </a>
                     <a
-                      href={`http://127.0.0.1:8000/produits/${produit.id}/supprimer`}
+                      href={`http://192.168.0.189:8000/produits/${produit.id}/supprimer`}
                       className="btn btn-outline-danger"
                     >
                       Supprimer
@@ -172,6 +172,9 @@ const Dashboard = () => {
             ))}
           </tbody>
         </table>
+            <a href={`http://192.168.0.189:8000/produits/create`}className="btn btn-outline-success">
+            Ajouter un Produit
+            </a>
       </div>
 
       {/* Camions Section */}
@@ -230,13 +233,13 @@ const Dashboard = () => {
                 <td>
                   <div className="btn-group" role="group">
                     <a
-                      href={`http://127.0.0.1:8000/camions/${camion.id}/modifier`}
-                      className="btn btn-outline-success"
+                      href={`http://192.168.0.189:8000/camions/${camion.id}/modifier`}
+                      className="btn btn-outline-warning"
                     >
                       Modifier
                     </a>
                     <a
-                      href={`http://127.0.0.1:8000/camions/${camion.id}/supprimer`}
+                      href={`http://192.168.0.189:8000/camions/${camion.id}/supprimer`}
                       className="btn btn-outline-danger"
                     >
                       Supprimer
@@ -247,6 +250,9 @@ const Dashboard = () => {
             ))}
           </tbody>
         </table>
+            <a href={`http://192.168.0.189:8000/camions/create`}className="btn btn-outline-success">
+            Ajouter un camion
+            </a>
       </div>
 
       {/* Chauffeurs Section */}
@@ -299,13 +305,13 @@ const Dashboard = () => {
                 <td>
                   <div className="btn-group" role="group">
                     <a
-                      href={`http://127.0.0.1:8000/chauffeurs/${chauffeur.id}/modifier`}
-                      className="btn btn-outline-success"
+                      href={`http://192.168.0.189:8000/chauffeurs/${chauffeur.id}/modifier`}
+                      className="btn btn-outline-warning"
                     >
                       Modifier
                     </a>
                     <a
-                      href={`http://127.0.0.1:8000/chauffeurs/${chauffeur.id}/supprimer`}
+                      href={`http://192.168.0.189:8000/chauffeurs/${chauffeur.id}/supprimer`}
                       className="btn btn-outline-danger"
                     >
                       Supprimer
@@ -316,6 +322,9 @@ const Dashboard = () => {
             ))}
           </tbody>
         </table>
+            <a href={`http://192.168.0.189:8000/chauffeurs/create`}className="btn btn-outline-success">
+            Ajouter un chauffeur
+            </a>
       </div>
 
       {/* Clients Section */}
@@ -368,13 +377,13 @@ const Dashboard = () => {
                 <td>
                   <div className="btn-group" role="group">
                     <a
-                      href={`http://127.0.0.1:8000/clients/${client.id}/modifier`}
-                      className="btn btn-outline-success"
+                      href={`http://192.168.0.189:8000/clients/${client.id}/modifier`}
+                      className="btn btn-outline-warning"
                     >
                       Modifier
                     </a>
                     <a
-                      href={`http://127.0.0.1:8000/clients/${client.id}/supprimer`}
+                      href={`http://192.168.0.189:8000/clients/${client.id}/supprimer`}
                       className="btn btn-outline-danger"
                     >
                       Supprimer
@@ -385,6 +394,9 @@ const Dashboard = () => {
             ))}
           </tbody>
         </table>
+            <a href={`http://192.168.0.189:8000/clients/create`}className="btn btn-outline-success">
+            Ajouter un client
+            </a>
       </div>
     </div>
   );
