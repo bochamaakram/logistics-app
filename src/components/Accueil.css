@@ -1,0 +1,16 @@
+.Accueil{
+    display: flex;
+}
+.No{
+    display: none !important;
+}
+@media screen and (max-width: 600px){
+    .Accueil {
+      display: none;
+    }
+    .No{
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+    }
+  }

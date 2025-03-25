@@ -1,0 +1,1 @@
+xmysql -h localhost -u xmysql_user -p xmysql_user1 -d logistics_db
