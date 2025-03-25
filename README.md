@@ -15,33 +15,6 @@ The **Logistics Management App** is my internship project, developed using **Lar
 - Node.js & npm
 - MySQL
 
-### Backend Setup:
-```sh
-# Clone the repository
-git clone https://github.com/your-repo/logistics-app.git
-cd logistics-app
-
-# Install dependencies
-composer install
-
-# Create environment file
-cp .env.example .env
-
-# Configure database in .env file
-DB_DATABASE=logistics_db
-DB_USERNAME=root
-DB_PASSWORD=
-
-# Generate application key
-php artisan key:generate
-
-# Run migrations
-php artisan migrate
-
-# Start the Laravel server
-php artisan serve
-```
-
 ### Frontend Setup:
 ```sh
 cd frontend
